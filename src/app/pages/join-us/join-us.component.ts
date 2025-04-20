@@ -17,6 +17,9 @@ export class JoinUsComponent {
   formSubmitted = signal(false);
   isLoading = signal(false);
   formError = signal<string | null>(null);
+  
+  // Email to receive form submissions
+  private readonly recipientEmail = 'sondre@outlook.com'; 
 
   applicationForm = this.formBuilder.group({
     name: ['', [Validators.required]],
@@ -42,13 +45,30 @@ export class JoinUsComponent {
     this.formError.set(null);
 
     try {
-      // In a real application, you would send this to a server
-      // For this example, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      const formData = new FormData();
+      const formValues = this.applicationForm.value as ApplicationForm;
       
-      const formData: ApplicationForm = this.applicationForm.value as ApplicationForm;
-      console.log('Form submitted:', formData);
-
+      // Add form fields
+      Object.entries(formValues).forEach(([key, value]) => {
+        if (value !== null && value !== undefined) {
+          formData.append(key, value.toString());
+        }
+      });
+      
+      // Add formsubmit.co configuration
+      formData.append('_subject', 'New LibreVore Application Submission');
+      formData.append('_captcha', 'false');
+      
+      // Send the form data
+      const response = await fetch(`https://formsubmit.co/${this.recipientEmail}`, {
+        method: 'POST',
+        body: formData
+      });
+      
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
+      
       this.formSubmitted.set(true);
       this.applicationForm.reset();
     } catch (error) {
