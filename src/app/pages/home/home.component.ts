@@ -12,11 +12,11 @@ import { Feature, Principle, Testimonial } from '../../shared/types';
 })
 export class HomeComponent {
   features = signal<Feature[]>([
-    {
-      icon: 'fas fa-home',
-      title: 'Family Friendly Housing',
-      description: 'Sustainable and comfortable homes designed with families in mind, using eco-friendly materials and techniques.'
-    },
+    // {
+    //   icon: 'fas fa-home',
+    //   title: 'Family Friendly Housing',
+    //   description: 'Sustainable and comfortable homes designed with families in mind, using eco-friendly materials and techniques.'
+    // },
     {
       icon: 'fas fa-seedling',
       title: 'Community Gardens',
