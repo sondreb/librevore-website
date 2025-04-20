@@ -1,0 +1,150 @@
+// Page Header
+.page-header {
+  height: 300px;
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/assets/images/principles-header.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 80px;
+  
+  h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+}
+
+// Principles Content
+.principles-content {
+  padding: 5rem 0;
+}
+
+.principles-intro {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  text-align: center;
+  
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.principle-section {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  .principle-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    text-align: center;
+    
+    i {
+      background-color: var(--primary-light);
+      color: white;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  .principle-details {
+    h2 {
+      margin-bottom: 1rem;
+      color: var(--primary-dark);
+    }
+    
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      
+      li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.75rem;
+        
+        &:before {
+          content: '\f00c';
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+          color: var(--primary);
+          position: absolute;
+          left: 0;
+          top: 0.25rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+.principles-cta {
+  background-color: var(--gray-100);
+  padding: 4rem 0;
+  
+  .cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    
+    h2 {
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+    
+    .btn {
+      min-width: 200px;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2.25rem;
+  }
+  
+  .principle-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    
+    .principle-icon {
+      margin-bottom: 1rem;
+      
+      i {
+        margin: 0 auto;
+      }
+    }
+  }
+}

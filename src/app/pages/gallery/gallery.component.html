@@ -1,0 +1,43 @@
+<!-- Page Header -->
+<div class="page-header">
+  <div class="container">
+    <h1>Photo Gallery</h1>
+    <p>Explore our location and community vision</p>
+  </div>
+</div>
+
+<!-- Gallery Section -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="gallery-intro">
+      <p>Below are images showcasing the breathtaking surroundings, conceptual designs, and vision for our Librevore Village community in Bar, Montenegro. These images help illustrate the natural beauty, sustainability features, and community aspects of our project.</p>
+    </div>
+    
+    <div class="gallery-grid">
+      @for (photo of photos(); track photo.id) {
+        <div class="gallery-item" (click)="showPhotoDetails(photo)">
+          <div class="gallery-image">
+            <img [src]="photo.imageUrl" [alt]="photo.alt">
+          </div>
+          <div class="gallery-caption">
+            <h3>{{photo.title}}</h3>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Photo Modal -->
+@if (selectedPhoto()) {
+  <div class="photo-modal" (click)="closePhotoDetails()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <span class="close-btn" (click)="closePhotoDetails()">&times;</span>
+      <img [src]="selectedPhoto()!.imageUrl" [alt]="selectedPhoto()!.alt">
+      <div class="modal-caption">
+        <h3>{{selectedPhoto()!.title}}</h3>
+        <p>{{selectedPhoto()!.description}}</p>
+      </div>
+    </div>
+  </div>
+}

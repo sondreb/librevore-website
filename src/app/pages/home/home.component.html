@@ -1,0 +1,159 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Welcome to Librevore Village</h1>
+      <p class="hero-subtitle">A community celebrating voluntaryism and healthy living in beautiful Bar, Montenegro</p>
+      <div class="hero-buttons">
+        <a routerLink="/about" class="btn">Learn More</a>
+        <a routerLink="/join-us" class="btn btn-accent">Join Our Community</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>A New Way of Living</h2>
+      <p>Librevore Village is more than just homes - it's a vision for harmonious community living</p>
+    </div>
+    
+    <div class="about-content">
+      <div class="about-text">
+        <p>Nestled in the beautiful landscape outside Bar, Montenegro, Librevore Village is a community living project focused on creating a nurturing environment for families who share values of voluntaryism, freedom, and sustainable living.</p>
+        <p>Our vision is to establish a family village where children can grow up connected to nature, where families support each other, and where we collectively work toward greater self-sufficiency through growing our own food and living more harmoniously with our surroundings.</p>
+        <a routerLink="/about" class="btn">Our Story</a>
+      </div>
+      <div class="about-image">
+        <img src="assets/images/village-concept.jpg" alt="Librevore Village Concept" class="rounded-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>What We Offer</h2>
+      <p>Key features of our community living project</p>
+    </div>
+    
+    <div class="features-grid">
+      @for (feature of features(); track feature.title) {
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i [class]="feature.icon"></i>
+          </div>
+          <h3>{{feature.title}}</h3>
+          <p>{{feature.description}}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Principles Section -->
+<section class="principles">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>Our Core Principles</h2>
+      <p>The values that guide our community</p>
+    </div>
+    
+    <div class="principles-grid">
+      @for (principle of principles(); track principle.title) {
+        <div class="principle-card">
+          <div class="principle-icon">
+            <i [class]="principle.icon"></i>
+          </div>
+          <h3>{{principle.title}}</h3>
+          <p>{{principle.description}}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Preview Section -->
+<section class="gallery-preview">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>Discover Our Location</h2>
+      <p>Experience the beauty of Montenegro</p>
+    </div>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="assets/images/location-1.jpg" alt="Beautiful forest near Librevore Village">
+        <div class="gallery-overlay">
+          <h4>Natural Surroundings</h4>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/location-2.jpg" alt="Community garden area">
+        <div class="gallery-overlay">
+          <h4>Garden Area</h4>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/location-3.jpg" alt="Sustainable housing concept">
+        <div class="gallery-overlay">
+          <h4>Housing Concept</h4>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/location-4.jpg" alt="View of Bar, Montenegro">
+        <div class="gallery-overlay">
+          <h4>Nearby Views</h4>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-4">
+      <a routerLink="/gallery" class="btn">View Full Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-content">
+        <h2>Ready to Join Our Community?</h2>
+        <p>We're looking for like-minded families who share our values and vision for a better way of living.</p>
+        <a routerLink="/join-us" class="btn btn-accent">Apply to Join Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>From Our Community</h2>
+      <p>Hear what families in our community have to say</p>
+    </div>
+    
+    <div class="testimonials-grid">
+      @for (testimonial of testimonials(); track testimonial.name) {
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"{{testimonial.content}}"</p>
+          </div>
+          <div class="testimonial-author">
+            <img [src]="testimonial.image || 'assets/images/default-avatar.jpg'" alt="{{testimonial.name}}">
+            <div>
+              <h4>{{testimonial.name}}</h4>
+              <p>{{testimonial.role}}</p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

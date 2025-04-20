@@ -1,1 +1,181 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #3a7563;
+  --primary-light: #5a9683;
+  --primary-dark: #2a5543;
+  --accent: #f8b400;
+  --light: #f5f5f5;
+  --dark: #333333;
+  --text: #4a4a4a;
+  --white: #ffffff;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --success: #28a745;
+  
+  --heading-font: 'Playfair Display', serif;
+  --body-font: 'Montserrat', sans-serif;
+  --transition: all 0.3s ease;
+  --shadow: 0 4px 12px rgba(0,0,0,0.1);
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text);
+  line-height: 1.6;
+  background-color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+  
+  &:hover {
+    color: var(--primary-light);
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  
+  &:hover {
+    background-color: var(--primary-light);
+    color: white;
+  }
+  
+  &.btn-accent {
+    background-color: var(--accent);
+    color: var(--dark);
+    
+    &:hover {
+      background-color: #e8a800; // Manually darkened version of #f8b400
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 20px;
+  background-color: var(--primary-light);
+  color: white;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+// Form styles
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: var(--white);
+  border: 1px solid var(--gray-400);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  
+  &:focus {
+    border-color: var(--primary);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(58, 117, 99, 0.25);
+  }
+}
+
+textarea.form-control {
+  min-height: 120px;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  font-weight: 500;
+}
+
+// Utility classes
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 3rem; }

@@ -1,0 +1,25 @@
+<header [class.scrolled]="isScrolled()">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <a routerLink="/">
+          <span class="logo-text">Librevore Village</span>
+        </a>
+      </div>
+
+      <nav [class.active]="isMenuOpen()">
+        <ul>
+          <li><a routerLink="/" (click)="isMenuOpen.set(false)">Home</a></li>
+          <li><a routerLink="/about" (click)="isMenuOpen.set(false)">About</a></li>
+          <li><a routerLink="/gallery" (click)="isMenuOpen.set(false)">Gallery</a></li>
+          <li><a routerLink="/principles" (click)="isMenuOpen.set(false)">Principles</a></li>
+          <li><a routerLink="/join-us" (click)="isMenuOpen.set(false)" class="cta-btn">Join Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle" (click)="toggleMenu()">
+        <i class="fas" [class.fa-bars]="!isMenuOpen()" [class.fa-times]="isMenuOpen()"></i>
+      </div>
+    </div>
+  </div>
+</header>

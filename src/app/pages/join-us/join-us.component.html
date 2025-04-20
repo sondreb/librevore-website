@@ -1,0 +1,251 @@
+<!-- Page Header -->
+<div class="page-header">
+  <div class="container">
+    <h1>Join Our Community</h1>
+    <p>Begin your journey to a more free and sustainable lifestyle</p>
+  </div>
+</div>
+
+<!-- Join Us Content -->
+<section class="join-section">
+  <div class="container">
+    <div class="join-intro">
+      <p>Thank you for your interest in joining Librevore Village. We're excited to connect with families who share our vision for a community based on voluntaryism, healthy living, and self-sustainability.</p>
+      <p>To ensure a good fit for all community members, we have created this application process to learn more about you and your family. This helps us understand your expectations and how we might align with your goals.</p>
+    </div>
+    
+    <div class="join-content">
+      <div class="join-description">
+        <h2>What We're Looking For</h2>
+        <p>We welcome families who:</p>
+        <ul class="criteria-list">
+          <li><strong>Share our values</strong> - Understand and embrace voluntaryism and non-aggression principles</li>
+          <li><strong>Prioritize healthy living</strong> - Are committed to natural foods, minimal toxin exposure, and overall wellness</li>
+          <li><strong>Value sustainability</strong> - Are interested in growing food and reducing dependence on external systems</li>
+          <li><strong>Contribute to community</strong> - Bring skills, knowledge, or resources that strengthen our village</li>
+          <li><strong>Respect diversity</strong> - Appreciate different approaches within our shared philosophical framework</li>
+        </ul>
+        
+        <div class="join-process">
+          <h2>Application Process</h2>
+          <ol>
+            <li>Submit your application using the form on this page</li>
+            <li>If there's potential alignment, we'll schedule a video call to get to know each other better</li>
+            <li>Depending on current availability and fit, we may invite you to visit the community</li>
+            <li>After a successful visit, we'll discuss next steps for joining Librevore Village</li>
+          </ol>
+        </div>
+      </div>
+      
+      <div class="application-form-container">
+        @if (formSubmitted()) {
+          <div class="success-message">
+            <div class="success-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Application Submitted!</h3>
+            <p>Thank you for your interest in Librevore Village. We've received your application and will review it carefully.</p>
+            <p>We aim to respond to all applications within 7 days. If your values and goals align with our community, we'll reach out to schedule a video call to continue the conversation.</p>
+          </div>
+        } @else {
+          <div class="form-container">
+            <h2>Application Form</h2>
+            
+            @if (formError()) {
+              <div class="error-alert">
+                {{ formError() }}
+              </div>
+            }
+            
+            <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+              <div class="form-section">
+                <h3>Basic Information</h3>
+                
+                <div class="form-group">
+                  <label class="form-label" for="name">Full Name *</label>
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    id="name" 
+                    formControlName="name"
+                    [class.is-invalid]="shouldShowError('name')"
+                  >
+                  @if (shouldShowError('name')) {
+                    <div class="error-message">{{ getErrorMessage('name') }}</div>
+                  }
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label" for="email">Email Address *</label>
+                  <input 
+                    type="email" 
+                    class="form-control" 
+                    id="email" 
+                    formControlName="email"
+                    [class.is-invalid]="shouldShowError('email')"
+                  >
+                  @if (shouldShowError('email')) {
+                    <div class="error-message">{{ getErrorMessage('email') }}</div>
+                  }
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label" for="phone">Phone Number *</label>
+                  <input 
+                    type="tel" 
+                    class="form-control" 
+                    id="phone" 
+                    formControlName="phone"
+                    [class.is-invalid]="shouldShowError('phone')"
+                  >
+                  @if (shouldShowError('phone')) {
+                    <div class="error-message">{{ getErrorMessage('phone') }}</div>
+                  }
+                </div>
+              </div>
+              
+              <div class="form-section">
+                <h3>Family Information</h3>
+                
+                <div class="form-group">
+                  <label class="form-label" for="familySize">Total Family Size (including yourself) *</label>
+                  <input 
+                    type="number" 
+                    class="form-control" 
+                    id="familySize" 
+                    formControlName="familySize"
+                    min="1"
+                    [class.is-invalid]="shouldShowError('familySize')"
+                  >
+                  @if (shouldShowError('familySize')) {
+                    <div class="error-message">{{ getErrorMessage('familySize') }}</div>
+                  }
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label" for="numberOfChildren">Number of Children *</label>
+                  <input 
+                    type="number" 
+                    class="form-control" 
+                    id="numberOfChildren" 
+                    formControlName="numberOfChildren"
+                    min="0"
+                    [class.is-invalid]="shouldShowError('numberOfChildren')"
+                  >
+                  @if (shouldShowError('numberOfChildren')) {
+                    <div class="error-message">{{ getErrorMessage('numberOfChildren') }}</div>
+                  }
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label" for="childrenAges">Children's Ages (if applicable)</label>
+                  <input 
+                    type="text" 
+                    class="form-control" 
+                    id="childrenAges" 
+                    formControlName="childrenAges"
+                    placeholder="e.g., 5, 8, 12"
+                  >
+                </div>
+              </div>
+              
+              <div class="form-section">
+                <h3>Values & Experience</h3>
+                
+                <div class="form-group">
+                  <label class="form-label" for="voluntaryismUnderstanding">
+                    What does voluntaryism mean to you and your family? *
+                  </label>
+                  <textarea 
+                    class="form-control" 
+                    id="voluntaryismUnderstanding" 
+                    formControlName="voluntaryismUnderstanding"
+                    rows="4"
+                    [class.is-invalid]="shouldShowError('voluntaryismUnderstanding')"
+                  ></textarea>
+                  @if (shouldShowError('voluntaryismUnderstanding')) {
+                    <div class="error-message">{{ getErrorMessage('voluntaryismUnderstanding') }}</div>
+                  }
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label" for="healthyLivingPractices">
+                    Describe your approach to healthy living and any specific practices you follow *
+                  </label>
+                  <textarea 
+                    class="form-control" 
+                    id="healthyLivingPractices" 
+                    formControlName="healthyLivingPractices"
+                    rows="4"
+                    [class.is-invalid]="shouldShowError('healthyLivingPractices')"
+                  ></textarea>
+                  @if (shouldShowError('healthyLivingPractices')) {
+                    <div class="error-message">{{ getErrorMessage('healthyLivingPractices') }}</div>
+                  }
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label" for="selfSustainabilityExperience">
+                    What experience do you have with self-sustainability (gardening, building, energy, etc.)? *
+                  </label>
+                  <textarea 
+                    class="form-control" 
+                    id="selfSustainabilityExperience" 
+                    formControlName="selfSustainabilityExperience"
+                    rows="4"
+                    [class.is-invalid]="shouldShowError('selfSustainabilityExperience')"
+                  ></textarea>
+                  @if (shouldShowError('selfSustainabilityExperience')) {
+                    <div class="error-message">{{ getErrorMessage('selfSustainabilityExperience') }}</div>
+                  }
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label" for="whyJoin">
+                    Why are you interested in joining Librevore Village? What are your expectations? *
+                  </label>
+                  <textarea 
+                    class="form-control" 
+                    id="whyJoin" 
+                    formControlName="whyJoin"
+                    rows="4"
+                    [class.is-invalid]="shouldShowError('whyJoin')"
+                  ></textarea>
+                  @if (shouldShowError('whyJoin')) {
+                    <div class="error-message">{{ getErrorMessage('whyJoin') }}</div>
+                  }
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label" for="additionalInfo">
+                    Anything else you'd like to share with us?
+                  </label>
+                  <textarea 
+                    class="form-control" 
+                    id="additionalInfo" 
+                    formControlName="additionalInfo"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+              
+              <div class="form-submit">
+                <button 
+                  type="submit" 
+                  class="btn btn-primary"
+                  [disabled]="isLoading()"
+                >
+                  @if (isLoading()) {
+                    <span>Submitting...</span>
+                  } @else {
+                    <span>Submit Application</span>
+                  }
+                </button>
+              </div>
+            </form>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
