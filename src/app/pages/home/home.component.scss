@@ -1,8 +1,8 @@
 // Hero Section
 .hero {
-  height: 80vh;
+  height: 60vh;
   min-height: 600px;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)), url('/assets/images/hero-bg.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.8)), url('/assets/images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
