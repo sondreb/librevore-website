@@ -19,7 +19,7 @@ export class JoinUsComponent {
   formError = signal<string | null>(null);
   
   // Email to receive form submissions
-  private readonly recipientEmail = 'sondre@outlook.com'; 
+  private readonly recipientEmail = '85ab66f5f9842687297783b88a2ec113'; 
 
   applicationForm = this.formBuilder.group({
     name: ['', [Validators.required]],
