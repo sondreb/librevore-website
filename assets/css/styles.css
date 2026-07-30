@@ -19,10 +19,11 @@
   --color-fg: #2d3a31;          /* deep forest green */
   --color-fg-soft: #55655a;
   --color-sage: #8c9a84;
-  --color-sage-deep: #6f7d67;
+  --color-sage-deep: #68765f;   /* AA-contrast sage for text on alabaster */
   --color-clay: #dccfc2;        /* soft clay / mushroom */
   --color-stone: #e6e2da;       /* border */
   --color-terracotta: #c27b66;
+  --color-on-dark: rgba(249, 248, 244, 0.82); /* body text on forest-green surfaces */
 
   /* Typography */
   --font-display: "Playfair Display", "Iowan Old Style", Georgia, serif;
@@ -86,6 +87,16 @@ body {
 
 img, svg { display: block; max-width: 100%; }
 button { font: inherit; color: inherit; }
+
+/* Anchors never fall back to the UA blue/purple. These live in a cascade layer
+   so any component rule beats them regardless of specificity — important
+   because `a:visited` would otherwise outrank single-class button styles.
+   Chromium only honours explicit colour values on :visited (never `inherit`),
+   so components on dark backgrounds must restate their own :visited colour. */
+@layer base {
+  a,
+  a:visited { color: var(--color-fg); }
+}
 
 ::selection { background: var(--color-clay); color: var(--color-fg); }
 
@@ -583,13 +594,14 @@ p { margin: 0; text-wrap: pretty; }
 /* Footer */
 .site-footer {
   background: var(--color-fg);
-  color: rgba(249, 248, 244, 0.82);
+  color: var(--color-on-dark);
   padding-block: clamp(3.5rem, 2rem + 5vw, 6rem) 2.5rem;
 }
 .site-footer h3, .site-footer .brand__word { color: var(--color-bg); }
-.site-footer a { color: inherit; }
-.site-footer a:visited { color: inherit; }
-.site-footer .brand { color: var(--color-bg); }
+.site-footer a,
+.site-footer a:visited { color: var(--color-on-dark); }
+.site-footer .brand,
+.site-footer .brand:visited { color: var(--color-bg); }
 .site-footer .brand__mark { color: var(--color-clay); }
 .footer__grid { display: grid; gap: 3rem; grid-template-columns: 1.5fr 1fr 1fr; align-items: start; }
 .footer__heading {
