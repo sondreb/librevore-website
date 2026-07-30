@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F9F8F4"/>
+      <stop offset="100%" stop-color="#F2F0EB"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  <circle cx="980" cy="150" r="110" fill="#C27B66" opacity="0.22"/>
+  <path d="M0 430c180-60 320 20 500-10s340-70 700-20v230H0z" fill="#DCCFC2"/>
+  <path d="M0 520c200-50 360 40 560 10s400-40 640 0v100H0z" fill="#8C9A84"/>
+  <g fill="#6F7D67">
+    <path d="M120 470c0-40 20-80 30-98 10 18 30 58 30 98 0 26-26 36-30 36s-30-10-30-36z"/>
+    <path d="M1020 470c0-34 17-68 26-84 9 16 26 50 26 84 0 22-22 31-26 31s-26-9-26-31z"/>
+  </g>
+  <text x="90" y="250" font-family="Playfair Display, Georgia, serif" font-size="96" font-weight="600" fill="#2D3A31">Librevore</text>
+  <text x="94" y="322" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="34" fill="#55655A">A family village for freer, more intentional lives</text>
+  <text x="94" y="378" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="24" letter-spacing="6" fill="#6F7D67">LIBERLAND · LIBERSTAD · MONTELIBERO</text>
+</svg>

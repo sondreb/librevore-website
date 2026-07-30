@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Librevore — A family village for freer, more intentional lives</title>
+<meta name="description" content="Librevore is a family village community. We relocate near Europe's free cities — Liberland, Liberstad, Montelibero — to homeschool, grow food, and build a real neighbourhood of families.">
+<meta name="theme-color" content="#f9f8f4">
+<link rel="canonical" href="https://librevore.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Librevore — A family village for freer, more intentional lives">
+<meta property="og:description" content="A network of families relocating near Europe's free cities to homeschool, grow food, and build a real village culture.">
+<meta property="og:url" content="https://librevore.com/">
+<meta property="og:image" content="https://librevore.com/assets/img/librevore-social.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Librevore",
+  "url": "https://librevore.com/",
+  "description": "A family village community for families who want to live freer, more intentional lives together, oriented toward European free cities.",
+  "email": "hello@librevore.com",
+  "founder": [
+    { "@type": "Person", "name": "Tania" },
+    { "@type": "Person", "name": "Sondre" }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Shared SVG symbols: original, hand-drawn botanical artwork -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="skyWarm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F4EFE6"/>
+      <stop offset="100%" stop-color="#E7E4D8"/>
+    </linearGradient>
+    <linearGradient id="skyCool" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EFEFE8"/>
+      <stop offset="100%" stop-color="#DDE1D8"/>
+    </linearGradient>
+    <linearGradient id="skyDusk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F6EDE6"/>
+      <stop offset="100%" stop-color="#E4DED3"/>
+    </linearGradient>
+    <linearGradient id="waterFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B9C6BE"/>
+      <stop offset="100%" stop-color="#9FB0A6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Hero: village under the sun -->
+  <symbol id="art-village" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice">
+    <rect width="600" height="800" fill="url(#skyWarm)"/>
+    <circle cx="410" cy="190" r="96" fill="#C27B66" opacity="0.22"/>
+    <circle cx="410" cy="190" r="60" fill="#C27B66" opacity="0.35"/>
+    <path d="M0 470 C 120 400 200 470 300 452 C 400 434 500 380 600 420 L600 800 L0 800 Z" fill="#DCCFC2"/>
+    <path d="M0 560 C 130 500 240 566 350 540 C 460 514 540 500 600 528 L600 800 L0 800 Z" fill="#B9C1A9"/>
+    <path d="M0 660 C 140 616 260 686 380 656 C 470 634 540 640 600 660 L600 800 L0 800 Z" fill="#8C9A84"/>
+    <g fill="#6F7D67">
+      <path d="M120 520c0-46 22-92 34-114 12 22 34 68 34 114 0 30-30 42-34 42s-34-12-34-42z"/>
+      <rect x="150" y="556" width="8" height="52" rx="4"/>
+      <path d="M470 500c0-40 19-80 30-99 11 19 30 59 30 99 0 26-27 37-30 37s-30-11-30-37z"/>
+      <rect x="496" y="530" width="7" height="46" rx="3.5"/>
+    </g>
+    <g>
+      <path d="M232 620h136v96H232z" fill="#F4F1EA"/>
+      <path d="M218 622 300 552l82 70z" fill="#C27B66"/>
+      <rect x="286" y="662" width="30" height="54" rx="4" fill="#6F7D67"/>
+      <rect x="248" y="646" width="26" height="24" rx="4" fill="#DCCFC2"/>
+      <rect x="328" y="646" width="26" height="24" rx="4" fill="#DCCFC2"/>
+    </g>
+    <g stroke="#2D3A31" stroke-opacity="0.35" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M60 740c40-14 84-14 124 0M400 752c46-16 96-14 140 4"/>
+    </g>
+    <g fill="#2D3A31" opacity="0.7">
+      <circle cx="150" cy="700" r="9"/>
+      <path d="M141 712h18l6 44h-30z"/>
+      <circle cx="184" cy="708" r="7"/>
+      <path d="M177 718h14l5 38h-24z"/>
+    </g>
+  </symbol>
+
+  <!-- Garden beds & hands-on growing -->
+  <symbol id="art-garden" viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice">
+    <rect width="600" height="750" fill="url(#skyCool)"/>
+    <circle cx="180" cy="150" r="78" fill="#8C9A84" opacity="0.2"/>
+    <path d="M0 430 C 150 380 300 440 450 400 C 520 382 570 388 600 400 L600 750 L0 750 Z" fill="#DCCFC2"/>
+    <g fill="#8C9A84">
+      <rect x="40" y="520" width="220" height="120" rx="18"/>
+      <rect x="330" y="560" width="230" height="130" rx="18"/>
+    </g>
+    <g stroke="#2D3A31" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75">
+      <path d="M90 520v-60M90 480c-24-6-32-26-30-46 22 2 36 18 34 44M90 484c22-10 28-32 24-52-22 6-34 24-30 48"/>
+      <path d="M170 520v-72M170 470c-22-8-28-28-26-46 20 4 32 20 30 42M170 472c20-10 26-30 22-48-20 6-30 24-26 44"/>
+      <path d="M250 520v-54M250 486c-20-8-24-26-22-40 18 4 26 18 24 36"/>
+      <path d="M400 560v-64M400 512c-22-8-28-26-26-44 20 4 32 20 30 42"/>
+      <path d="M490 560v-80M490 500c22-10 28-32 24-52-22 6-34 24-30 50"/>
+    </g>
+    <g fill="#C27B66">
+      <circle cx="150" cy="452" r="9"/><circle cx="212" cy="436" r="7"/><circle cx="452" cy="500" r="8"/>
+    </g>
+    <path d="M0 690h600v60H0z" fill="#6F7D67" opacity="0.5"/>
+  </symbol>
+
+  <!-- Founders / family portrait -->
+  <symbol id="art-family" viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice">
+    <rect width="600" height="750" fill="url(#skyDusk)"/>
+    <circle cx="300" cy="250" r="170" fill="#DCCFC2" opacity="0.55"/>
+    <path d="M0 520 C 140 470 260 540 380 512 C 470 492 550 502 600 522 L600 750 L0 750 Z" fill="#B9C1A9"/>
+    <g fill="#2D3A31">
+      <circle cx="228" cy="330" r="42"/>
+      <path d="M180 384h96c16 0 26 12 26 28v230h-148V412c0-16 10-28 26-28z" opacity="0.92"/>
+      <circle cx="372" cy="342" r="40"/>
+      <path d="M328 392h88c15 0 24 12 24 26v224h-136V418c0-14 9-26 24-26z" opacity="0.8"/>
+    </g>
+    <g fill="#6F7D67">
+      <circle cx="290" cy="500" r="26"/>
+      <path d="M262 532h56c9 0 14 8 14 18v92h-84v-92c0-10 5-18 14-18z"/>
+      <circle cx="432" cy="524" r="18"/>
+      <path d="M412 548h40c7 0 11 6 11 13v81h-62v-81c0-7 4-13 11-13z"/>
+    </g>
+    <g stroke="#C27B66" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7">
+      <path d="M96 640c40-22 88-24 130-6M400 664c44-18 90-16 128 6"/>
+    </g>
+  </symbol>
+
+  <!-- Liberland: river & reeds -->
+  <symbol id="art-liberland" viewBox="0 0 640 480" preserveAspectRatio="xMidYMid slice">
+    <rect width="640" height="480" fill="url(#skyWarm)"/>
+    <circle cx="500" cy="120" r="58" fill="#C27B66" opacity="0.25"/>
+    <path d="M0 250 C 120 220 220 268 340 244 C 440 224 560 232 640 250 L640 300 L0 300 Z" fill="#B9C1A9"/>
+    <path d="M0 300h640v180H0z" fill="url(#waterFade)"/>
+    <g stroke="#F4F1EA" stroke-width="3" stroke-linecap="round" opacity="0.7" fill="none">
+      <path d="M60 350h120M240 380h150M420 340h140M120 420h180"/>
+    </g>
+    <g stroke="#6F7D67" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M70 480V300M100 480V320M130 480V310"/>
+    </g>
+    <g fill="#6F7D67">
+      <ellipse cx="70" cy="296" rx="7" ry="18"/><ellipse cx="100" cy="316" rx="7" ry="18"/><ellipse cx="130" cy="306" rx="7" ry="18"/>
+    </g>
+    <path d="M520 300l40-56 40 56z" fill="#8C9A84"/>
+  </symbol>
+
+  <!-- Liberstad: nordic pines -->
+  <symbol id="art-liberstad" viewBox="0 0 640 480" preserveAspectRatio="xMidYMid slice">
+    <rect width="640" height="480" fill="url(#skyCool)"/>
+    <circle cx="150" cy="110" r="52" fill="#DCCFC2" opacity="0.8"/>
+    <path d="M0 260 C 120 190 220 250 320 210 C 430 166 540 210 640 190 L640 480 L0 480 Z" fill="#DCCFC2"/>
+    <path d="M0 330 C 140 290 250 344 380 318 C 480 298 570 312 640 330 L640 480 L0 480 Z" fill="#8C9A84"/>
+    <g fill="#2D3A31" opacity="0.82">
+      <path d="M420 380c0-52 26-104 40-128 14 24 40 76 40 128 0 34-34 48-40 48s-40-14-40-48z"/>
+      <path d="M520 396c0-42 20-84 32-104 12 20 32 62 32 104 0 28-28 38-32 38s-32-10-32-38z"/>
+      <path d="M100 400c0-38 18-76 28-94 10 18 28 56 28 94 0 26-25 34-28 34s-28-8-28-34z"/>
+    </g>
+    <g fill="#F4F1EA">
+      <path d="M210 400h130v80H210z"/>
+      <path d="M196 402 275 336l79 66z" fill="#6F7D67"/>
+      <rect x="258" y="436" width="30" height="44" rx="4" fill="#C27B66"/>
+    </g>
+  </symbol>
+
+  <!-- Montelibero: coastal mountains -->
+  <symbol id="art-montelibero" viewBox="0 0 640 480" preserveAspectRatio="xMidYMid slice">
+    <rect width="640" height="480" fill="url(#skyDusk)"/>
+    <circle cx="470" cy="110" r="60" fill="#C27B66" opacity="0.3"/>
+    <path d="M0 300 200 120 340 300z" fill="#8C9A84"/>
+    <path d="M240 300 400 150 560 300z" fill="#6F7D67"/>
+    <path d="M420 300 520 200 640 300z" fill="#B9C1A9"/>
+    <path d="M0 300h640v180H0z" fill="url(#waterFade)"/>
+    <g stroke="#F4F1EA" stroke-width="3" stroke-linecap="round" opacity="0.65" fill="none">
+      <path d="M40 356h140M220 396h170M430 350h160M300 440h180"/>
+    </g>
+    <g fill="#2D3A31" opacity="0.7">
+      <path d="M96 300h58v-40h-58z"/>
+      <path d="M88 262l37-30 37 30z" fill="#C27B66"/>
+    </g>
+  </symbol>
+
+  <!-- Tropical: Prospera / Morazán -->
+  <symbol id="art-tropics" viewBox="0 0 600 750" preserveAspectRatio="xMidYMid slice">
+    <rect width="600" height="750" fill="url(#skyDusk)"/>
+    <circle cx="420" cy="180" r="90" fill="#C27B66" opacity="0.28"/>
+    <path d="M0 470 C 140 430 280 486 420 458 C 500 442 560 448 600 462 L600 750 L0 750 Z" fill="#DCCFC2"/>
+    <path d="M0 750h600V596c-90-26-190-6-300 12S80 610 0 592z" fill="url(#waterFade)"/>
+    <g stroke="#6F7D67" stroke-width="8" fill="none" stroke-linecap="round">
+      <path d="M160 590c-6-90 8-160 30-206M420 604c8-84-4-150-24-192"/>
+    </g>
+    <g fill="#8C9A84">
+      <path d="M190 384c-38-30-84-30-116-8 34 4 66 16 92 34zM190 384c14-44 4-88-22-114-2 36-2 70 4 100zM190 384c40-26 86-22 116 4-34 0-68 8-96 22zM190 384c8 40 40 68 78 76-16-32-40-58-64-72z"/>
+      <path d="M396 412c-34-26-76-26-104-6 30 4 58 14 82 30zM396 412c12-40 4-80-20-102-2 32-2 62 4 90zM396 412c36-24 78-20 104 4-30 0-60 6-86 20z"/>
+    </g>
+    <g fill="#2D3A31" opacity="0.6">
+      <circle cx="300" cy="522" r="10"/>
+      <path d="M290 536h20l6 44h-32z"/>
+    </g>
+  </symbol>
+
+  <!-- Leaf motif used decoratively -->
+  <symbol id="art-leaf" viewBox="0 0 200 200">
+    <path d="M180 20C90 24 20 84 20 160c0 8 1 14 3 20 70-2 140-58 157-160z" fill="currentColor"/>
+    <path d="M176 24C130 60 80 110 30 178" stroke="#2D3A31" stroke-opacity="0.25" stroke-width="3" fill="none"/>
+  </symbol>
+</svg>
+
+<header class="site-header" id="siteHeader">
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="Librevore, home">
+      <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="23" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M24 39V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M24 26c-8-1-12-7-11-14 7-1 12 4 11 14z" fill="currentColor" opacity="0.85"/>
+        <path d="M24 32c8-1 12-7 11-14-7-1-12 4-11 14z" fill="currentColor" opacity="0.55"/>
+      </svg>
+      <span class="brand__word">Librevore</span>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a class="nav__link" href="#vision">Vision</a></li>
+        <li><a class="nav__link" href="#values">Values</a></li>
+        <li><a class="nav__link" href="#places">Places</a></li>
+        <li><a class="nav__link" href="#together">Together</a></li>
+        <li><a class="nav__link" href="#founders">Who we are</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn--primary nav__cta" href="#join">
+      Join us
+      <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+
+    <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileMenu">
+      <span class="visually-hidden">Open menu</span>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" data-open="false" role="dialog" aria-modal="true" aria-label="Site menu">
+  <button class="mobile-menu__close" id="menuClose" type="button">
+    <span class="visually-hidden">Close menu</span>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <nav aria-label="Mobile">
+    <ul>
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#values">Values</a></li>
+      <li><a href="#places">Places</a></li>
+      <li><a href="#together">Together</a></li>
+      <li><a href="#founders">Who we are</a></li>
+      <li><a href="#join">Join us</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- ============================================================ HERO -->
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow" data-reveal>A family village community</p>
+        <h1 data-reveal style="--reveal-delay:80ms">
+          Live <span class="italic">freer</span>,<br>
+          grow deeper,<br>
+          raise them <span class="italic">together</span>.
+        </h1>
+        <p class="lede" data-reveal style="--reveal-delay:160ms">
+          Librevore is a network of families relocating near Europe's free cities — to homeschool our
+          children, grow real food, and build the kind of neighbourhood most people only remember from
+          stories.
+        </p>
+        <div class="hero__actions" data-reveal style="--reveal-delay:240ms">
+          <a class="btn btn--primary" href="#join">
+            Gather with us
+            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#vision">See the vision</a>
+        </div>
+        <ul class="pill-row" data-reveal style="--reveal-delay:320ms">
+          <li class="pill">Homeschooling &amp; unschooling</li>
+          <li class="pill">Food production</li>
+          <li class="pill">Village living</li>
+          <li class="pill">Free-city aligned</li>
+        </ul>
+      </div>
+
+      <div class="hero__art" data-reveal style="--reveal-delay:200ms">
+        <div class="arch">
+          <svg viewBox="0 0 600 800" role="img" aria-label="Illustration of a small village of homes under a warm sun, surrounded by hills, trees and families walking."><use href="#art-village"></use></svg>
+        </div>
+        <div class="float-card">
+          <p>“A childhood spent outdoors, among people who know your name.”</p>
+          <span>The Librevore idea</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ RIBBON -->
+  <div class="container">
+    <div class="ribbon">
+      <div class="ribbon__grid">
+        <div data-reveal>
+          <p class="ribbon__value">Freedom</p>
+          <p class="ribbon__label">by design</p>
+        </div>
+        <div data-reveal style="--reveal-delay:100ms">
+          <p class="ribbon__value">Children</p>
+          <p class="ribbon__label">learning through life</p>
+        </div>
+        <div data-reveal style="--reveal-delay:200ms">
+          <p class="ribbon__value">Soil</p>
+          <p class="ribbon__label">food we grow ourselves</p>
+        </div>
+        <div data-reveal style="--reveal-delay:300ms">
+          <p class="ribbon__value">Neighbours</p>
+          <p class="ribbon__label">not strangers</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ VISION -->
+  <section class="section" id="vision">
+    <div class="container split">
+      <div class="split__art" data-reveal>
+        <div class="arch">
+          <svg viewBox="0 0 600 750" role="img" aria-label="Illustration of raised garden beds with vegetables growing in rich soil."><use href="#art-garden"></use></svg>
+        </div>
+      </div>
+      <div class="split__copy">
+        <p class="eyebrow" data-reveal>The vision</p>
+        <h2 data-reveal style="--reveal-delay:80ms">A village you can <span class="italic">actually</span> move to.</h2>
+        <p class="lede" data-reveal style="--reveal-delay:140ms">
+          We are building a network of families who choose to relocate and settle near or within free
+          cities in Europe, while remaining connected through shared values, mutual support, and group
+          adventures further afield.
+        </p>
+        <p class="muted" data-reveal style="--reveal-delay:200ms">
+          Our focus is simple: raise children with freedom, grow real food, create resilient
+          neighbourhoods, and live among people who share the same desire for independence and
+          community. Not a forum. Not a someday-plan. Families with boxes packed and hands in the soil.
+        </p>
+        <a class="btn btn--ghost" href="#values" data-reveal style="--reveal-delay:260ms">What we stand for</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ VALUES -->
+  <section class="section section--tint" id="values">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>What we stand for</p>
+        <h2 data-reveal style="--reveal-delay:80ms">Four roots we <span class="italic">grow</span> from.</h2>
+      </div>
+
+      <div class="grid grid--4 stagger" style="margin-top: 4rem;">
+        <div data-reveal>
+          <article class="card">
+            <span class="icon-halo" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V6a2 2 0 0 1 2-2h6v16H6a2 2 0 0 0-2 1.5Z"/><path d="M12 20h6a2 2 0 0 1 2 1.5V6a2 2 0 0 0-2-2h-6"/><path d="M12 8h4M12 12h4"/></svg>
+            </span>
+            <h3>Homeschooling &amp; unschooling</h3>
+            <p class="muted">Children learn through life, curiosity, and real responsibility rather than institutional systems.</p>
+          </article>
+        </div>
+
+        <div data-reveal style="--reveal-delay:100ms">
+          <article class="card">
+            <span class="icon-halo" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c-4 0-7-2.5-7-7 4.5-.5 7 2.5 7 7Z"/><path d="M12 15c4-.5 7-3 7-7.5-4.5 0-7 3-7 7.5Z"/><path d="M5 21h14"/></svg>
+            </span>
+            <h3>Gardening &amp; food production</h3>
+            <p class="muted">Hands-on growing, soil health, and greater self-reliance at the household and village level.</p>
+          </article>
+        </div>
+
+        <div data-reveal style="--reveal-delay:200ms">
+          <article class="card">
+            <span class="icon-halo" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20v-6l4-3 4 3v6"/><path d="M13 20v-9l4-3 4 3v9"/><path d="M2 20h20"/><path d="M6.5 15h1M17 13h1"/></svg>
+            </span>
+            <h3>Community living</h3>
+            <p class="muted">A true neighbourhood of families who know and support one another, not isolated households.</p>
+          </article>
+        </div>
+
+        <div data-reveal style="--reveal-delay:300ms">
+          <article class="card">
+            <span class="icon-halo" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3Z"/></svg>
+            </span>
+            <h3>Free-city alignment</h3>
+            <p class="muted">Settling within or close to places that prioritise liberty, low bureaucracy, and voluntary cooperation.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Decorative vine, connecting sections like a root system -->
+  <div class="container" aria-hidden="true">
+    <svg class="vine" viewBox="0 0 1200 120" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M0 60c150 0 180-45 300-45s160 90 300 90 190-90 300-90 180 45 300 45"/>
+      <g stroke-width="1.2">
+        <path d="M300 15c-14-16-6-34 10-40 6 18-2 32-10 40ZM600 105c16 14 34 6 40-10-18-6-32 2-40 10ZM900 15c14-16 6-34-10-40-6 18 2 32 10 40Z" fill="currentColor" fill-opacity="0.5"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ============================================================ PLACES -->
+  <section class="section" id="places">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>European anchors</p>
+        <h2 data-reveal style="--reveal-delay:80ms">Three places we are <span class="italic">oriented</span> toward.</h2>
+        <p class="lede" data-reveal style="--reveal-delay:140ms">
+          Different climates, legal environments, and practical opportunities — each reachable for
+          families seeking a European base.
+        </p>
+      </div>
+
+      <div class="grid grid--3 stagger" style="margin-top: 4rem;">
+        <div data-reveal>
+          <article class="place">
+            <div class="place__art">
+              <svg viewBox="0 0 640 480" role="img" aria-label="Illustration of a wide river with reeds and gentle green banks."><use href="#art-liberland"></use></svg>
+            </div>
+            <div class="place__body">
+              <p class="place__meta">Danube · Serbia &amp; Croatia</p>
+              <h3>Liberland</h3>
+              <p class="muted">A river frontier on the Danube — young, pioneering, and building from first principles with people who chose to be there.</p>
+            </div>
+          </article>
+        </div>
+
+        <div data-reveal style="--reveal-delay:120ms">
+          <article class="place">
+            <div class="place__art">
+              <svg viewBox="0 0 640 480" role="img" aria-label="Illustration of Nordic pine forest with a small cabin on rolling land."><use href="#art-liberstad"></use></svg>
+            </div>
+            <div class="place__body">
+              <p class="place__meta">Southern Norway</p>
+              <h3>Liberstad</h3>
+              <p class="muted">Forest, land and long northern summers — a private city project in Norway with room to build, plant and raise children outdoors.</p>
+            </div>
+          </article>
+        </div>
+
+        <div data-reveal style="--reveal-delay:240ms">
+          <article class="place">
+            <div class="place__art">
+              <svg viewBox="0 0 640 480" role="img" aria-label="Illustration of coastal mountains meeting calm water."><use href="#art-montelibero"></use></svg>
+            </div>
+            <div class="place__body">
+              <p class="place__meta">Montenegro</p>
+              <h3>Montelibero</h3>
+              <p class="muted">Mediterranean climate, mountains and sea — a growing free-market community where a family can garden nearly year-round.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ QUOTE -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="quote-band" data-reveal>
+        <svg class="quote-band__leaf quote-band__leaf--a" viewBox="0 0 200 200" aria-hidden="true"><use href="#art-leaf"></use></svg>
+        <svg class="quote-band__leaf quote-band__leaf--b" viewBox="0 0 200 200" aria-hidden="true"><use href="#art-leaf"></use></svg>
+        <blockquote>We would rather build the village than keep waiting for one.</blockquote>
+        <cite>Tania &amp; Sondre, founders</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ TOGETHER -->
+  <section class="section section--clay" id="together">
+    <div class="container split split--reverse">
+      <div class="split__art" data-reveal>
+        <div class="arch">
+          <svg viewBox="0 0 600 750" role="img" aria-label="Illustration of a tropical coastline with palms and warm sun."><use href="#art-tropics"></use></svg>
+        </div>
+      </div>
+      <div class="split__copy">
+        <p class="eyebrow" data-reveal>Beyond daily life</p>
+        <h2 data-reveal style="--reveal-delay:80ms">We travel <span class="italic">together</span>, too.</h2>
+        <p class="lede" data-reveal style="--reveal-delay:140ms">
+          Group holidays and longer stays in other free-city projects — such as Prospera and Morazán in
+          Honduras — are part of the vision, so the community stays connected even when exploring
+          further afield.
+        </p>
+        <ul class="pill-row" data-reveal style="--reveal-delay:200ms">
+          <li class="pill">Prospera, Roatán</li>
+          <li class="pill">Morazán, Honduras</li>
+          <li class="pill">Shared winter stays</li>
+          <li class="pill">Family-scale trips</li>
+        </ul>
+        <p class="muted" data-reveal style="--reveal-delay:260ms">
+          Children who grow up crossing borders with the same friends learn something no classroom
+          hands out: the world is open, and it belongs to those who go and see it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FOUNDERS -->
+  <section class="section" id="founders">
+    <div class="container split">
+      <div class="split__art" data-reveal>
+        <div class="arch">
+          <svg viewBox="0 0 600 750" role="img" aria-label="Illustration of two parents standing with two small children in an open landscape."><use href="#art-family"></use></svg>
+        </div>
+      </div>
+      <div class="split__copy">
+        <p class="eyebrow" data-reveal>Who we are</p>
+        <h2 data-reveal style="--reveal-delay:80ms">Started by a family, <span class="italic">for</span> families.</h2>
+        <p class="lede" data-reveal style="--reveal-delay:140ms">
+          Librevore is started by Tania and Sondre, parents of two young children, ages 1 and 6. We are
+          building this because we want a better environment for our family — and we know we are not
+          the only ones.
+        </p>
+        <p class="muted" data-reveal style="--reveal-delay:200ms">
+          We are actively looking for more families who share the same direction: people ready to move,
+          build, grow food, educate their children differently, and create a real village culture
+          rather than just talk about it.
+        </p>
+        <a class="btn btn--primary" href="#join" data-reveal style="--reveal-delay:260ms">
+          Introduce your family
+          <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FAQ -->
+  <section class="section section--tint" id="faq">
+    <div class="container container--narrow">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>Questions families ask</p>
+        <h2 data-reveal style="--reveal-delay:80ms">Honest <span class="italic">answers</span>.</h2>
+      </div>
+
+      <div class="accordion" style="margin-top:3rem;" data-reveal>
+        <div class="accordion__item">
+          <h3>
+            <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-1-trigger">
+              <span>Do we have to move immediately?</span>
+              <span class="accordion__icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+            </button>
+          </h3>
+          <div class="accordion__panel" id="faq-1" role="region" aria-labelledby="faq-1-trigger">
+            <p>No. Most families begin with conversations, visits, and a season of overlap before they commit. What matters is direction: that you genuinely intend to relocate rather than admire the idea from a distance.</p>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <h3>
+            <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-2-trigger">
+              <span>What if we have never homeschooled?</span>
+              <span class="accordion__icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+            </button>
+          </h3>
+          <div class="accordion__panel" id="faq-2" role="region" aria-labelledby="faq-2-trigger">
+            <p>That is normal. Learning alongside other families is far easier than starting alone — shared days, mixed ages, real projects, and parents who trade strengths instead of each carrying everything.</p>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <h3>
+            <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-3-trigger">
+              <span>Which location should we choose?</span>
+              <span class="accordion__icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+            </button>
+          </h3>
+          <div class="accordion__panel" id="faq-3" role="region" aria-labelledby="faq-3-trigger">
+            <p>Liberland, Liberstad and Montelibero offer different climates, legal environments and practical opportunities. We help families compare them honestly — growing season, cost, travel, paperwork — rather than selling one answer.</p>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <h3>
+            <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-trigger">
+              <span>Do we need land or farming experience?</span>
+              <span class="accordion__icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+            </button>
+          </h3>
+          <div class="accordion__panel" id="faq-4" role="region" aria-labelledby="faq-4-trigger">
+            <p>None at all. Willingness beats experience. A first raised bed, a few chickens, and neighbours who have already made the mistakes will take you further than any course.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ JOIN -->
+  <section class="section" id="join">
+    <div class="container">
+      <div class="join" data-reveal>
+        <div class="join__copy">
+          <p class="eyebrow">Gathering families now</p>
+          <h2>Tell us about your <span class="italic">family</span>.</h2>
+          <p class="muted">
+            If you are a family seeking a freer, more grounded life among like-minded people — centred
+            on children, land, community, and voluntary association — Librevore is the place to begin
+            finding each other.
+          </p>
+          <p class="muted">
+            Prefer email? Write to
+            <a class="link-quiet" href="mailto:hello@librevore.com">hello@librevore.com</a>.
+          </p>
+        </div>
+
+        <form class="form" id="joinForm" action="mailto:hello@librevore.com" method="post" enctype="text/plain" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required placeholder="Tania &amp; Sondre">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="place">Where you are drawn to</label>
+            <select id="place" name="place">
+              <option value="Undecided">Still deciding</option>
+              <option value="Liberland">Liberland</option>
+              <option value="Liberstad">Liberstad</option>
+              <option value="Montelibero">Montelibero</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Your family, in a few lines</label>
+            <textarea id="message" name="message" required placeholder="Children's ages, where you are now, what you are hoping to build…"></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">
+            Send introduction
+            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="form__note">This opens your email app with the message ready to send. No tracking, no list-building.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="#top" aria-label="Librevore, back to top">
+          <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="23" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M24 39V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M24 26c-8-1-12-7-11-14 7-1 12 4 11 14z" fill="currentColor" opacity="0.85"/>
+            <path d="M24 32c8-1 12-7 11-14-7-1-12 4-11 14z" fill="currentColor" opacity="0.55"/>
+          </svg>
+          <span class="brand__word">Librevore</span>
+        </a>
+        <p style="margin-top:1.5rem; max-width:34ch;">
+          A family village community for families who want to live freer, more intentional lives —
+          together.
+        </p>
+      </div>
+
+      <div>
+        <p class="footer__heading">Explore</p>
+        <ul class="footer__links">
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#values">What we stand for</a></li>
+          <li><a href="#places">European anchors</a></li>
+          <li><a href="#together">Travelling together</a></li>
+          <li><a href="#faq">Questions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer__heading">Reach out</p>
+        <ul class="footer__links">
+          <li><a href="mailto:hello@librevore.com">hello@librevore.com</a></li>
+          <li><a href="#join">Introduce your family</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> Librevore</span>
+      <span>Children · Land · Community · Voluntary association</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
