@@ -115,10 +115,10 @@
       ].join("\n");
 
       window.location.href =
-        "mailto:hello@librevore.com?subject=" + encodeURIComponent(subject) +
+        "mailto:librevoreme@gmail.com?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
 
-      if (status) status.textContent = "Opening your email app… if nothing happens, write to hello@librevore.com.";
+      if (status) status.textContent = "Opening your email app… if nothing happens, write to librevoreme@gmail.com.";
     });
   }
 

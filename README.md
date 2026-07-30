@@ -12,6 +12,7 @@ index.html                    Single-page site (all sections + inline SVG artwor
 assets/css/styles.css         Design system: tokens, components, sections, motion
 assets/js/main.js             Progressive enhancement: nav, accordion, reveals, contact form
 assets/img/                   Favicon and social share image
+CNAME                         Custom domain: village.librevore.me
 .github/workflows/deploy.yml  GitHub Pages deployment
 ```
 
@@ -50,13 +51,18 @@ python -m http.server 8123
 
 ## Deployment
 
+Live at **https://village.librevore.me**.
+
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which uploads the repository root as the
 Pages artifact and deploys it. Set **Settings → Pages → Source** to **GitHub Actions** once.
+
+The `CNAME` file pins the custom domain. Point a DNS `CNAME` record for `village` on `librevore.me`
+at `sondreb.github.io`, then tick **Enforce HTTPS** in the Pages settings once the certificate is issued.
 
 `.nojekyll` is present so Jekyll never touches the files.
 
 ## Contact
 
-The join form and footer link to `hello@librevore.com`. The form composes a pre-filled `mailto:` draft
+The join form and footer link to `librevoreme@gmail.com`. The form composes a pre-filled `mailto:` draft
 in the visitor's own email client — no backend, no tracking. Swap the address (in `index.html` and
 `assets/js/main.js`) or point the form at a hosted form service if a real inbox pipeline is wanted.
